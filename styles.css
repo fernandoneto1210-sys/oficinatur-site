@@ -661,7 +661,7 @@ footer .container {
 }
 
 footer img {
-    height: 20px !important;  /* Logo menor no rodapé */
+    height: 50px !important;  /* Logo menor no rodapé */
     width: auto;
     margin-bottom: 0 !important;
 }
