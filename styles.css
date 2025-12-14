@@ -671,3 +671,33 @@ footer p {
     font-size: 14px;
     line-height: 1.4;
 }
+/* ===== AJUSTE DO BOTÃO ENVIAR E ESPAÇAMENTO ===== */
+
+.btn-enviar {
+    width: 200px !important;        /* Reduz a largura do botão */
+    max-width: 100%;
+    padding: 12px 24px;
+    background: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 auto;                 /* Centraliza o botão */
+    display: block;
+}
+
+.btn-enviar:hover {
+    background: #1b5e20;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* Espaço entre o formulário e o rodapé */
+#contato {
+    padding-bottom: 60px !important;  /* Cria espaço antes do rodapé */
+}
