@@ -568,3 +568,54 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* AJUSTE 1 — LOGO MAIOR */
+.logo img {
+    height: 80px !important;   /* aumenta a logo */
+    width: auto;
+}
+
+/* AJUSTE 2 — CONTATO – Layout bonito e responsivo */
+.contato-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contato-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background: #2e7d32;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #1b5e20;
+}
