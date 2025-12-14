@@ -316,9 +316,9 @@ footer {
 }
 
 footer img {
-    height: 50px;
-    margin-bottom: 1rem;
-    filter: brightness(0) invert(1);
+    height: 60px !important;  /* Aumenta a logo no rodapé */
+    width: auto;
+    margin-bottom: 0 !important;
 }
 
 footer p {
