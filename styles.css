@@ -34,7 +34,32 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}/* ===== AJUSTE DA ALTURA DO MENU SUPERIOR ===== */
+
+.navbar {
+    padding: 8px 0 !important;  /* Reduz a altura total */
 }
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 48px !important;   /* Reduz o tamanho da logo */
+    width: auto;
+}
+
+.nav-menu li {
+    margin-left: 25px;         /* Reduz o espaçamento entre links */
+}
+
+.nav-menu a {
+    padding: 6px 0;            /* Deixa os cliques mais ajustados */
+    font-size: 16px;
+}
+
 
 /* ========================================
    HEADER E NAVEGAÇÃO
