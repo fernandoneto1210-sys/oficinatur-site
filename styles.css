@@ -316,7 +316,7 @@ footer {
 }
 
 footer img {
-    height: 60px !important;  /* Aumenta a logo no rodapé */
+    height: 100px !important;  /* Aumenta a logo no rodapé */
     width: auto;
     margin-bottom: 0 !important;
 }
