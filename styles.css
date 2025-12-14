@@ -595,7 +595,7 @@ footer p {
 }
 /* AJUSTE 1 — LOGO MAIOR */
 .logo img {
-    height: 80px !important;   /* aumenta a logo */
+    height: 100px !important;   /* aumenta a logo */
     width: auto;
 }
 
