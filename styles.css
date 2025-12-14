@@ -647,7 +647,7 @@ footer p {
 /* ===== AJUSTE DA ALTURA DO RODAPÉ ===== */
 
 footer {
-    padding: 20px 0 !important;  /* Reduz a altura total */
+    padding: 10px 0 !important;  /* Reduz a altura total */
     background: #2e7d32;
     color: white;
     text-align: center;
@@ -661,7 +661,7 @@ footer .container {
 }
 
 footer img {
-    height: 40px !important;  /* Logo menor no rodapé */
+    height: 20px !important;  /* Logo menor no rodapé */
     width: auto;
     margin-bottom: 0 !important;
 }
