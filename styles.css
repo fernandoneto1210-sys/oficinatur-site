@@ -34,32 +34,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}/* ===== AJUSTE DA ALTURA DO MENU SUPERIOR ===== */
-
-.navbar {
-    padding: 8px 0 !important;  /* Reduz a altura total */
 }
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 48px !important;   /* Reduz o tamanho da logo */
-    width: auto;
-}
-
-.nav-menu li {
-    margin-left: 25px;         /* Reduz o espaçamento entre links */
-}
-
-.nav-menu a {
-    padding: 6px 0;            /* Deixa os cliques mais ajustados */
-    font-size: 16px;
-}
-
 
 /* ========================================
    HEADER E NAVEGAÇÃO
@@ -74,7 +49,7 @@ header {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 8px 0;
 }
 
 .navbar .container {
@@ -84,7 +59,7 @@ header {
 }
 
 .logo img {
-    height: 90px;
+    height: 48px;
     width: auto;
 }
 
@@ -98,10 +73,16 @@ header {
     gap: 2rem;
 }
 
+.nav-menu li {
+    margin-left: 25px;
+}
+
 .nav-menu a {
     text-decoration: none;
     color: var(--dark-gray);
     font-weight: 500;
+    padding: 6px 0;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
@@ -306,24 +287,91 @@ header {
 }
 
 /* ========================================
+   CONTATO
+   ======================================== */
+#contato {
+    padding-bottom: 60px;
+}
+
+.contato-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contato-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    width: 200px;
+    max-width: 100%;
+    padding: 12px 24px;
+    background: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-enviar:hover {
+    background: #1b5e20;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 footer {
-    background: var(--dark-gray);
-    color: var(--white);
-    padding: 3rem 20px;
+    padding: 20px 0;
+    background: #2e7d32;
+    color: white;
     text-align: center;
 }
 
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 footer img {
-    height: 100px !important;  /* Aumenta a logo no rodapé */
+    height: 60px;
     width: auto;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 
 footer p {
-    opacity: 0.8;
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 /* ========================================
@@ -461,43 +509,6 @@ footer p {
     color: var(--dark-gray);
 }
 
-.roteiro-sidebar {
-    background: var(--light-gray);
-    padding: 2rem;
-    border-radius: 10px;
-    height: fit-content;
-    position: sticky;
-    top: 100px;
-}
-
-.roteiro-sidebar h3 {
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-}
-
-.roteiro-info-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--medium-gray);
-}
-
-.roteiro-info-item:last-child {
-    border-bottom: none;
-}
-
-.roteiro-info-label {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.roteiro-info-value {
-    color: var(--dark-gray);
-    font-size: 1.1rem;
-    margin-top: 0.3rem;
-}
-
 .btn-pdf {
     display: block;
     width: 100%;
@@ -574,10 +585,6 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .roteiro-sidebar {
-        position: static;
-    }
-
     .roteiro-hero-info {
         flex-direction: column;
         gap: 0.5rem;
@@ -592,160 +599,4 @@ footer p {
     .roteiros-grid {
         grid-template-columns: 1fr;
     }
-}
-/* AJUSTE 1 — LOGO MAIOR */
-.logo img {
-    height: 100px !important;   /* aumenta a logo */
-    width: auto;
-}
-
-/* AJUSTE 2 — CONTATO – Layout bonito e responsivo */
-.contato-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contato-form form {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px;
-}
-
-.contato-form input,
-.contato-form select,
-.contato-form textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.contato-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.btn-enviar {
-    width: 100%;
-    padding: 14px;
-    background: #2e7d32;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-enviar:hover {
-    background: #1b5e20;
-}
-/* ===== AJUSTE DA ALTURA DO RODAPÉ ===== */
-
-footer {
-    padding: 10px 0 !important;  /* Reduz a altura total */
-    background: #2e7d32;
-    color: white;
-    text-align: center;
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;  /* Reduz o espaço entre logo e texto */
-}
-
-footer img {
-    height: 48px !important;  /* Logo menor no rodapé */
-    width: auto;
-    margin-bottom: 0 !important;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.4;
-}
-/* ===== AJUSTE DO BOTÃO ENVIAR E ESPAÇAMENTO ===== */
-
-.btn-enviar {
-    width: 200px !important;        /* Reduz a largura do botão */
-    max-width: 100%;
-    padding: 12px 24px;
-    background: #2e7d32;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 0 auto;                 /* Centraliza o botão */
-    display: block;
-}
-
-.btn-enviar:hover {
-    background: #1b5e20;
-}
-
-.btn-enviar:active {
-    transform: scale(0.98);
-}
-
-/* Espaço entre o formulário e o rodapé */
-#contato {
-    padding-bottom: 60px !important;  /* Cria espaço antes do rodapé */
-}
-/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
-
-.aviso-vagas {
-    background: #ffebee;             /* fundo claro puxando para vermelho suave */
-    color: #b71c1c;                   /* texto vermelho escuro */
-    text-align: center;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 16px;
-    border-bottom: 2px solid #b71c1c;
-    margin-bottom: 20px;
-}
-
-.aviso-vagas-inline {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 6px 12px;
-    background: #fff3cd;              /* amarelo claro */
-    color: #856404;                   /* amarelo escuro */
-    font-weight: 600;
-    border-radius: 4px;
-    border: 1px solid #ffeeba;
-}
-/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
-
-.aviso-vagas {
-    background: #ffebee;             /* fundo claro puxando para vermelho suave */
-    color: #b71c1c;                   /* texto vermelho escuro */
-    text-align: center;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 17px;
-    border-bottom: 3px solid #b71c1c;
-    margin: 0;
-    display: block;
-}
-
-.aviso-vagas-inline {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #fff3cd;              /* amarelo claro */
-    color: #856404;                   /* amarelo escuro */
-    font-weight: 600;
-    border-radius: 5px;
-    border: 1px solid #ffeeba;
-    font-size: 15px;
 }
