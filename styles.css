@@ -724,3 +724,28 @@ footer p {
     border-radius: 4px;
     border: 1px solid #ffeeba;
 }
+/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
+
+.aviso-vagas {
+    background: #ffebee;             /* fundo claro puxando para vermelho suave */
+    color: #b71c1c;                   /* texto vermelho escuro */
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 17px;
+    border-bottom: 3px solid #b71c1c;
+    margin: 0;
+    display: block;
+}
+
+.aviso-vagas-inline {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #fff3cd;              /* amarelo claro */
+    color: #856404;                   /* amarelo escuro */
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #ffeeba;
+    font-size: 15px;
+}
