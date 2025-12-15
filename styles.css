@@ -49,7 +49,7 @@ header {
 }
 
 .navbar {
-    padding: 8px 0;
+    padding: 8px 0; /* menu mais fino */
 }
 
 .navbar .container {
@@ -59,7 +59,7 @@ header {
 }
 
 .logo img {
-    height: 48px;
+    height: 48px;   /* logo do topo */
     width: auto;
 }
 
@@ -105,14 +105,14 @@ header {
 }
 
 /* ========================================
-   HERO SECTION
+   HERO DA HOME
    ======================================== */
 .hero {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
     color: var(--white);
     padding: 180px 20px 120px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 80px; /* compensa o header fixo */
 }
 
 .hero-content h1 {
@@ -164,7 +164,7 @@ header {
 }
 
 /* ========================================
-   SOBRE SECTION
+   SOBRE
    ======================================== */
 .sobre {
     padding: 100px 20px;
@@ -187,7 +187,7 @@ header {
 }
 
 /* ========================================
-   ROTEIROS SECTION
+   ROTEIROS (HOME)
    ======================================== */
 .roteiros {
     padding: 100px 20px;
@@ -290,7 +290,7 @@ header {
    CONTATO
    ======================================== */
 #contato {
-    padding-bottom: 60px;
+    padding-bottom: 60px; /* espaço pro rodapé */
 }
 
 .contato-form {
@@ -346,6 +346,33 @@ header {
 }
 
 /* ========================================
+   AVISO DE ÚLTIMAS VAGAS
+   ======================================== */
+.aviso-vagas {
+    background: #ffebee;      /* fundo vermelho claro */
+    color: #b71c1c;           /* texto vermelho escuro */
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 17px;
+    border-bottom: 3px solid #b71c1c;
+    margin: 0;
+    display: block;
+}
+
+.aviso-vagas-inline {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #fff3cd;
+    color: #856404;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #ffeeba;
+    font-size: 15px;
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 footer {
@@ -375,12 +402,12 @@ footer p {
 }
 
 /* ========================================
-   PÁGINAS INDIVIDUAIS DE ROTEIROS
+   PÁGINAS INDIVIDUAIS – ROTEIROS
    ======================================== */
 .breadcrumb {
     background: var(--light-gray);
     padding: 1rem 20px;
-    margin-top: 80px;
+    margin-top: 80px; /* compensa header fixo */
     font-size: 0.9rem;
 }
 
