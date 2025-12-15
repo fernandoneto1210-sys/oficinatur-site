@@ -701,3 +701,26 @@ footer p {
 #contato {
     padding-bottom: 60px !important;  /* Cria espaço antes do rodapé */
 }
+/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
+
+.aviso-vagas {
+    background: #ffebee;             /* fundo claro puxando para vermelho suave */
+    color: #b71c1c;                   /* texto vermelho escuro */
+    text-align: center;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid #b71c1c;
+    margin-bottom: 20px;
+}
+
+.aviso-vagas-inline {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: #fff3cd;              /* amarelo claro */
+    color: #856404;                   /* amarelo escuro */
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1px solid #ffeeba;
+}
