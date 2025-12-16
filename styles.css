@@ -345,9 +345,7 @@ header {
     transform: scale(0.98);
 }
 
-/* ========================================
-   AVISO DE ÚLTIMAS VAGAS
-   ======================================== */
+/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
 .aviso-vagas {
     background: #ffebee;      /* fundo vermelho claro */
     color: #b71c1c;           /* texto vermelho escuro */
@@ -359,7 +357,6 @@ header {
     margin: 0;
     display: block;
 }
-
 .aviso-vagas-inline {
     display: inline-block;
     margin-top: 10px;
