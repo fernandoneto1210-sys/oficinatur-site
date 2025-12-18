@@ -655,9 +655,15 @@ footer p {
 .banner-grupos-2026 {
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 140px 0 40px 0;
+    padding: 40px 0 0 0;  /* ← SEM espaço embaixo */
     text-align: center;
-    margin-top: 60px; /* espaço para o menu fixo */
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.hero {
+    padding: 0 0 80px 0;  /* ← SEM espaço em cima */
+    margin-top: 0;
 }
 
 .banner-grupos-conteudo h2 {
