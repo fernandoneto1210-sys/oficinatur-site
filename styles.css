@@ -1,33 +1,14 @@
-/* ========================================
-   RESET E VARIÁVEIS
-   ======================================== */
+/* ===== RESET E BASE ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-green: #2d7a4f;
-    --light-green: #4a9d6f;
-    --dark-green: #1e5438;
-    --white: #ffffff;
-    --light-gray: #f5f5f5;
-    --medium-gray: #e0e0e0;
-    --dark-gray: #333333;
-    --text-gray: #666666;
-    --red: #d32f2f;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1f2933;
     line-height: 1.6;
-    color: var(--dark-gray);
-    background: var(--white);
 }
 
 .container {
@@ -36,123 +17,69 @@ body {
     padding: 0 20px;
 }
 
-/* ========================================
-   HEADER E NAVEGAÇÃO
-   ======================================== */
-header {
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
+/* ===== MENU / NAVBAR ===== */
 .navbar {
-    padding: 8px 0; /* menu mais fino */
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .logo img {
-    height: 92px;   /* logo do topo */
+    height: 55px;
     width: auto;
 }
 
-.logo a {
-    text-decoration: none;
-}
-
 .nav-menu {
-    display: flex;
     list-style: none;
-    gap: 2rem;
+    display: flex;
+    gap: 24px;
 }
 
-.nav-menu li {
-    margin-left: 25px;
-}
-
-.nav-menu a {
+.nav-menu li a {
     text-decoration: none;
-    color: var(--dark-gray);
+    color: #1f2933;
     font-weight: 500;
-    padding: 6px 0;
-    font-size: 16px;
-    transition: color 0.3s;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
-    color: var(--primary-green);
+.nav-menu li a:hover {
+    color: #2f855a;
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
+    gap: 4px;
     cursor: pointer;
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-green);
-    margin: 3px 0;
-    transition: 0.3s;
+    background-color: #1f2933;
+    border-radius: 2px;
 }
 
-<!-- HERO VERDE (AGORA EM CIMA) -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Sua Viagem Começa Aqui!</h1>
-        <p class="hero-subtitle">Viagens em grupos com acompanhamento personalizado</p>
-        <div class="hero-badge">
-            <span class="badge-icon">🎉</span>
-            <span class="badge-text">30 anos de experiência em 2026</span>
-        </div>
-    </div>
-</section>
-
-
-.hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 24px;
-    font-weight: 400;
-    opacity: 0.95;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.15);
-    padding: 8px 16px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.badge-icon {
-    font-size: 18px;
-}
-
-/* ===== BANNER AZUL (PRIMEIRO, EM CIMA) ===== */
+/* ===== BANNER AZUL (PRIMEIRO) ===== */
 .banner-grupos-2026 {
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 45px 0 45px 0;
+    padding: 50px 0;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
 .banner-grupos-conteudo h2 {
@@ -164,7 +91,7 @@ header {
 }
 
 .banner-grupos-conteudo p {
-    font-size: 15px;
+    font-size: 16px;
     max-width: 750px;
     margin: 0 auto 20px auto;
     line-height: 1.6;
@@ -175,7 +102,7 @@ header {
     display: inline-block;
     background: #ffffff;
     color: #1e3a8a;
-    padding: 11px 26px;
+    padding: 12px 28px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
@@ -191,25 +118,24 @@ header {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* ===== HERO VERDE (SEGUNDO, LOGO ABAIXO) ===== */
+/* ===== HERO VERDE (SEGUNDO) ===== */
 .hero {
     background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
-    padding: 60px 0 60px 0;
-    margin-top: 0;
+    padding: 70px 0;
     text-align: center;
     color: #ffffff;
 }
 
 .hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 14px;
+    font-size: 44px;
+    margin-bottom: 12px;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 19px;
+    margin-bottom: 22px;
     font-weight: 400;
     opacity: 0.95;
 }
@@ -229,219 +155,254 @@ header {
     font-size: 20px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .banner-grupos-2026 {
-        padding: 35px 20px 35px 20px;
-        margin-top: 70px;
-    }
-
-    .banner-grupos-conteudo h2 {
-        font-size: 24px;
-        letter-spacing: 1px;
-    }
-
-    .banner-grupos-conteudo p {
-        font-size: 14px;
-    }
-
-    .btn-banner {
-        padding: 9px 20px;
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 50px 20px 50px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-
-    .hero-badge {
-        font-size: 13px;
-        padding: 8px 14px;
-    }
-}
-
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 0 60px 0;
-        margin-top: 70px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-
-    .banner-grupos-2026 {
-        padding: 24px 16px 24px 16px;
-    }
-
-    .banner-grupos-conteudo h2 {
-        font-size: 22px;
-    }
-
-    .banner-grupos-conteudo p {
-        font-size: 13px;
-    }
-
-    .btn-banner {
-        padding: 8px 18px;
-        font-size: 13px;
-    }
-}
-
-/* ========================================
-   SOBRE
-   ======================================== */
+/* ===== SOBRE ===== */
 .sobre {
-    padding: 100px 20px;
-    background: var(--white);
+    padding: 60px 0;
+    background-color: #f7fafc;
+    text-align: center;
 }
 
 .sobre h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin-bottom: 3rem;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1f2933;
 }
 
 .sobre p {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    text-align: center;
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto 12px auto;
+    color: #52606d;
 }
 
-/* ========================================
-   ROTEIROS (HOME)
-   ======================================== */
+/* ===== ROTEIROS ===== */
 .roteiros {
-    padding: 100px 20px;
-    background: var(--light-gray);
+    padding: 60px 0;
+    background-color: #ffffff;
 }
 
 .roteiros h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin-bottom: 3rem;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1f2933;
 }
 
 .roteiros-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+    gap: 30px;
 }
 
 .roteiro-card {
-    background: var(--white);
-    border-radius: 15px;
+    background: #ffffff;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .roteiro-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.roteiro-imagem-wrapper {
+    position: relative;
 }
 
 .roteiro-card img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
-.roteiro-card.fechado img {
-    opacity: 0.7;
+.badge-ultimas-vagas {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #dc2626;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .tag-fechado {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--red);
-    color: var(--white);
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    top: 12px;
+    left: 12px;
+    background: #64748b;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: 600;
+    text-transform: uppercase;
+}
+
+.roteiro-card.fechado {
+    opacity: 0.7;
 }
 
 .roteiro-card h3 {
-    color: var(--primary-green);
-    font-size: 1.6rem;
-    margin: 1.5rem 1.5rem 0.5rem;
+    font-size: 20px;
+    margin: 16px 16px 8px 16px;
+    color: #1f2933;
 }
 
 .roteiro-card p {
-    color: var(--text-gray);
-    margin: 0.5rem 1.5rem;
-    font-size: 0.95rem;
+    font-size: 14px;
+    color: #52606d;
+    margin: 0 16px 16px 16px;
 }
 
 .roteiro-card .btn,
 .roteiro-card .btn-secundario {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 25px;
+    display: block;
+    text-align: center;
+    margin: 0 16px 16px 16px;
+    padding: 10px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
-    margin: 1.5rem;
-    transition: background 0.3s;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .roteiro-card .btn {
-    background: var(--primary-green);
-    color: var(--white);
+    background: #2f855a;
+    color: #ffffff;
 }
 
 .roteiro-card .btn:hover {
-    background: var(--dark-green);
+    background: #22543d;
 }
 
 .roteiro-card .btn-secundario {
-    background: var(--medium-gray);
-    color: var(--dark-gray);
+    background: #e2e8f0;
+    color: #52606d;
 }
 
 .roteiro-card .btn-secundario:hover {
-    background: var(--text-gray);
-    color: var(--white);
+    background: #cbd5e0;
 }
 
-/* ========================================
-   CONTATO
-   ======================================== */
-#contato {
-    padding-bottom: 60px; /* espaço pro rodapé */
+/* ===== DIFERENCIAIS ===== */
+.diferenciais {
+    padding: 60px 0;
+    background-color: #f7fafc;
 }
 
-.contato-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.diferenciais h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2933;
 }
 
-.contato-form form {
+.diferenciais .subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #52606d;
+    margin-bottom: 40px;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.diferencial-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.diferencial-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.diferencial-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1f2933;
+}
+
+.diferencial-card p {
+    font-size: 14px;
+    color: #52606d;
+    line-height: 1.6;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2933;
+}
+
+.contato .subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #52606d;
+    margin-bottom: 40px;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contato-info h3,
+.contato-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1f2933;
+}
+
+.contato-item {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contato-icon {
+    font-size: 24px;
+}
+
+.contato-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #1f2933;
+}
+
+.contato-item p {
+    font-size: 14px;
+    color: #52606d;
+}
+
+.contato-item a {
+    color: #2f855a;
+    text-decoration: none;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
 }
 
 .contato-form input,
@@ -449,482 +410,81 @@ header {
 .contato-form textarea {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
+    margin-bottom: 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
 }
 
-.contato-form textarea {
-    height: 150px;
-    resize: vertical;
+.contato-form input:focus,
+.contato-form select:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: #2f855a;
 }
 
 .btn-enviar {
-    width: 200px;
-    max-width: 100%;
-    padding: 12px 24px;
-    background: #2e7d32;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+    width: 100%;
+    padding: 12px;
+    background: #2f855a;
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease;
-    margin: 0 auto;
-    display: block;
 }
 
 .btn-enviar:hover {
-    background: #1b5e20;
+    background: #22543d;
 }
 
-.btn-enviar:active {
-    transform: scale(0.98);
-}
-
-/* ===== AVISO DE ÚLTIMAS VAGAS ===== */
-.aviso-vagas {
-    background: #ffebee;      /* fundo vermelho claro */
-    color: #b71c1c;           /* texto vermelho escuro */
-    text-align: center;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 17px;
-    border-bottom: 3px solid #b71c1c;
-    margin: 0;
-    display: block;
-}
-.aviso-vagas-inline {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #fff3cd;
-    color: #856404;
-    font-weight: 600;
-    border-radius: 5px;
-    border: 1px solid #ffeeba;
-    font-size: 15px;
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
+/* ===== RODAPÉ ===== */
 footer {
-    padding: 20px 0;
-    background: #2e7d32;
-    color: white;
+    background-color: #1f2933;
+    color: #ffffff;
+    padding: 30px 0;
     text-align: center;
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
 }
 
 footer img {
     height: 60px;
     width: auto;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 footer p {
-    margin: 0;
     font-size: 14px;
-    line-height: 1.4;
+    color: #cbd5e0;
 }
 
-/* ========================================
-   PÁGINAS INDIVIDUAIS – ROTEIROS
-   ======================================== */
-.breadcrumb {
-    background: var(--light-gray);
-    padding: 1rem 20px;
-    margin-top: 80px; /* compensa header fixo */
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: var(--primary-green);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.roteiro-hero {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.roteiro-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.roteiro-hero-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: var(--white);
-    padding: 3rem 2rem 2rem;
-}
-
-.roteiro-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.roteiro-hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.roteiro-hero-info {
-    display: flex;
-    gap: 2rem;
-    font-size: 0.95rem;
-}
-
-.roteiro-detalhes {
-    padding: 60px 20px;
-    background: var(--white);
-}
-
-.roteiro-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.roteiro-main {
-    background: var(--white);
-}
-
-.roteiro-section {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--medium-gray);
-}
-
-.roteiro-section h2 {
-    color: var(--primary-green);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.roteiro-destaques-list {
-    list-style: none;
-}
-
-.roteiro-destaques-list li {
-    padding: 0.8rem 0;
-    color: var(--text-gray);
-    font-size: 1rem;
-}
-
-.dia-item {
-    background: var(--light-gray);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-green);
-}
-
-.dia-item h3 {
-    color: var(--primary-green);
-    margin-bottom: 0.8rem;
-}
-
-.dia-item p {
-    color: var(--text-gray);
-    margin-bottom: 0.5rem;
-    line-height: 1.7;
-}
-
-.roteiro-incluso {
-    background: #e8f5e9;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
-
-.roteiro-incluso h3 {
-    color: var(--primary-green);
-    margin-bottom: 1rem;
-}
-
-.roteiro-incluso ul {
-    list-style: none;
-}
-
-.roteiro-incluso li {
-    padding: 0.5rem 0;
-    color: var(--dark-gray);
-}
-
-.btn-pdf {
-    display: block;
-    width: 100%;
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: background 0.3s;
-}
-
-.btn-pdf:hover {
-    background: var(--dark-green);
-}
-
-.btn-contato {
-    display: block;
-    width: 100%;
-    background: var(--light-green);
-    color: var(--white);
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: background 0.3s;
-}
-
-.btn-contato:hover {
-    background: var(--primary-green);
-}
-
-/* ========================================
-   RESPONSIVIDADE
-   ======================================== */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
 
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: var(--white);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 2rem 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .roteiro-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .roteiro-hero-info {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .roteiros-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Badge de últimas vagas no card do roteiro */
-.roteiro-imagem-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.roteiro-imagem-wrapper img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.badge-ultimas-vagas {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: #ff1744;
-    color: #fff;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-}
-/* ===== BANNER VIAGENS EM GRUPO 2026 ===== */
-.banner-grupos-2026 {
-    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-    color: #ffffff;
-    padding: 32px 0 32px 0;
-    text-align: center;
-    margin-top: 80px;
-    position: relative;
-    z-index: 2;
-}
-
-.banner-grupos-conteudo h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-}
-
-.banner-grupos-conteudo p {
-    font-size: 14px;
-    max-width: 620px;
-    margin: 0 auto 16px auto;
-    line-height: 1.4;
-    font-weight: 400;
-    opacity: 0.95;
-}
-
-.btn-banner {
-    display: inline-block;
-    background: #ffffff;
-    color: #1e3a8a;
-    padding: 9px 22px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-}
-
-.btn-banner:hover {
-    background: #dbeafe;
-    color: #0f172a;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-/* ===== HERO ===== */
-.hero {
-    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
-    padding: 60px 0 80px 0;
-    margin-top: 0;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-content {
-    text-align: center;
-    color: #ffffff;
-}
-
-.hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 24px;
-    font-weight: 400;
-    opacity: 0.95;
-}
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.15);
-    padding: 8px 16px;
-    border-radius: 999px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.badge-icon {
-    font-size: 18px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #ffffff;
-    color: #2f855a;
-    padding: 11px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.cta-button:hover {
-    background: #f0fdf4;
-    color: #22543d;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
     .banner-grupos-2026 {
-        padding: 24px 16px 24px 16px;
+        padding: 40px 20px;
         margin-top: 70px;
     }
 
     .banner-grupos-conteudo h2 {
-        font-size: 22px;
-        letter-spacing: 1px;
+        font-size: 26px;
     }
 
     .banner-grupos-conteudo p {
-        font-size: 13px;
-    }
-
-    .btn-banner {
-        padding: 8px 18px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .hero {
-        padding: 50px 0 70px 0;
+        padding: 60px 20px;
     }
 
     .hero-content h1 {
@@ -935,8 +495,10 @@ footer p {
         font-size: 16px;
     }
 
-    .cta-button {
-        padding: 9px 22px;
-        font-size: 14px;
+    .sobre,
+    .roteiros,
+    .diferenciais,
+    .contato {
+        padding: 40px 0;
     }
 }
