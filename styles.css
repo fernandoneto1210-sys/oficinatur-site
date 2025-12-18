@@ -146,51 +146,128 @@ header {
     font-size: 18px;
 }
 
-/* ===== BANNER AZUL (AGORA EMBAIXO DO HERO) ===== */
+/* ===== BANNER AZUL (PRIMEIRO, EM CIMA) ===== */
 .banner-grupos-2026 {
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 32px 0 32px 0;
+    padding: 45px 0 45px 0;
     text-align: center;
-    margin-top: 0;  /* gruda logo abaixo do hero */
+    margin-top: 80px;
 }
 
 .banner-grupos-conteudo h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-size: 32px;
+    margin-bottom: 14px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-weight: 700;
 }
 
 .banner-grupos-conteudo p {
-    font-size: 14px;
-    max-width: 620px;
-    margin: 0 auto 16px auto;
-    line-height: 1.4;
+    font-size: 15px;
+    max-width: 750px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
     font-weight: 400;
-    opacity: 0.95;
 }
 
 .btn-banner {
     display: inline-block;
     background: #ffffff;
     color: #1e3a8a;
-    padding: 9px 22px;
+    padding: 11px 26px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .btn-banner:hover {
     background: #dbeafe;
     color: #0f172a;
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+/* ===== HERO VERDE (SEGUNDO, LOGO ABAIXO) ===== */
+.hero {
+    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
+    padding: 60px 0 60px 0;
+    margin-top: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.badge-icon {
+    font-size: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .banner-grupos-2026 {
+        padding: 35px 20px 35px 20px;
+        margin-top: 70px;
+    }
+
+    .banner-grupos-conteudo h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .banner-grupos-conteudo p {
+        font-size: 14px;
+    }
+
+    .btn-banner {
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 20px 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {
