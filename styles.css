@@ -37,8 +37,10 @@ body {
 }
 
 .logo img {
-    height: 55px;
+    height: 70px;
+    width: auto;
 }
+
 
 .nav-menu {
     display: flex;
