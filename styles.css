@@ -653,73 +653,130 @@ footer p {
 }
 /* ===== BANNER VIAGENS EM GRUPO 2026 ===== */
 .banner-grupos-2026 {
-    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); /* azul marinho */
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 28px 0 40px 0;          /* banner mais baixo, com respiro embaixo */
+    padding: 32px 0 32px 0;
     text-align: center;
-    margin-top: 80px;                /* espaço para o menu fixo */
+    margin-top: 80px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .banner-grupos-conteudo h2 {
-    font-size: 30px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
 }
 
 .banner-grupos-conteudo p {
-    font-size: 15px;
-    max-width: 640px;
-    margin: 0 auto 18px auto;
-    line-height: 1.5;
-    font-weight: 300;
+    font-size: 14px;
+    max-width: 620px;
+    margin: 0 auto 16px auto;
+    line-height: 1.4;
+    font-weight: 400;
+    opacity: 0.95;
 }
 
 .btn-banner {
     display: inline-block;
     background: #ffffff;
     color: #1e3a8a;
-    padding: 10px 24px;
+    padding: 9px 22px;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 .btn-banner:hover {
     background: #dbeafe;
     color: #0f172a;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* HERO AJUSTADO PARA “ENCAIXAR” DEBAIXO DO BANNER */
+/* ===== HERO ===== */
 .hero {
-    background: linear-gradient(135deg, #2f855a 0%, #2f855a 100%); /* mantém verde, mas pode ajustar tom aqui */
-    padding: 40px 0 80px 0;      /* bem menos espaço em cima */
-    margin-top: -20px;           /* puxa o hero um pouco pra cima, invadindo o azul */
+    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
+    padding: 60px 0 80px 0;
+    margin-top: 0;
     position: relative;
-    z-index: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.badge-icon {
+    font-size: 18px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #2f855a;
+    padding: 11px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background: #f0fdf4;
+    color: #22543d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
     .banner-grupos-2026 {
-        padding: 24px 16px 30px 16px;
+        padding: 24px 16px 24px 16px;
         margin-top: 70px;
     }
 
     .banner-grupos-conteudo h2 {
         font-size: 22px;
+        letter-spacing: 1px;
     }
 
     .banner-grupos-conteudo p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .btn-banner {
@@ -728,7 +785,19 @@ footer p {
     }
 
     .hero {
-        padding: 30px 0 60px 0;
-        margin-top: -10px;
+        padding: 50px 0 70px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 9px 22px;
+        font-size: 14px;
     }
 }
