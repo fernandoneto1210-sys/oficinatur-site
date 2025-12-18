@@ -653,7 +653,7 @@ footer p {
 }
 /* ===== BANNER VIAGENS EM GRUPO 2026 ===== */
 .banner-grupos-2026 {
-    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+    background: linear-gradient(135deg, #4a9d6f 0%, #1b5e20 100%);
     color: #ffffff;
     padding: 50px 0;
     text-align: center;
@@ -679,7 +679,7 @@ footer p {
 .btn-banner {
     display: inline-block;
     background: #ffffff;
-    color: #2e7d32;
+    color: #4a9d6f;
     padding: 12px 28px;
     border-radius: 4px;
     text-decoration: none;
