@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina de Turismo - 30 Anos Transformando Sonhos em Viagens</title>
     <meta name="description" content="Viagens em grupos com acompanhamento personalizado. 30 anos de experiência em turismo.">
-   <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- MENU -->
     <header>
         <nav class="navbar">
             <div class="container">
-                <div class="logo">
-                   <a href="index.html">
-                       <img src="imagens/logo.png" alt="Oficina de Turismo">
-</a>
 
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="imagens/logo.png" alt="Oficina de Turismo">
+                    </a>
                 </div>
+
                 <ul class="nav-menu">
                     <li><a href="#home">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
@@ -25,27 +27,49 @@
                     <li><a href="#diferenciais">Nosso DNA</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
+
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+
             </div>
         </nav>
     </header>
 
+    <!-- BANNER VIAGENS EM GRUPO 2026 -->
+    <section class="banner-grupos-2026">
+        <div class="container">
+            <div class="banner-grupos-conteudo">
+                <h2>Viagens em Grupo 2026</h2>
+                <p>
+                    Roteiros internacionais com acompanhamento especializado, saindo de São Lourenço.
+                    Experiências exclusivas, grupos reduzidos e tudo organizado pela Oficina de Turismo.
+                </p>
+                <a href="#roteiros" class="btn-banner">
+                    Conheça os roteiros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sua Viagem Começa Aqui!</h1>
             <p class="hero-subtitle">Viagens em grupos com acompanhamento personalizado</p>
+
             <div class="hero-badge">
                 <span class="badge-icon">🎉</span>
                 <span class="badge-text">30 anos de experiência em 2026</span>
             </div>
+
             <a href="#roteiros" class="cta-button">Conheça Nossos Roteiros</a>
         </div>
     </section>
 
+    <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container">
             <h2>30 Anos Transformando Sonhos em Viagens</h2>
@@ -54,25 +78,25 @@
         </div>
     </section>
 
+    <!-- ROTEIROS -->
     <section id="roteiros" class="roteiros">
         <div class="container">
             <h2>Roteiros 2026</h2>
 
             <div class="roteiros-grid">
 
+                <!-- INGLATERRA & ESCOCIA -->
                 <div class="roteiro-card">
-    <div class="roteiro-imagem-wrapper">
-        <img src="imagens/inglaterra-escocia.jpg" alt="Inglaterra & Escócia">
-        <div class="badge-ultimas-vagas">
-            Últimas 4 vagas
-        </div>
-    </div>
-    <h3>Inglaterra & Escócia</h3>
-    <p>17 a 29 de setembro<br>13 dias / 11 noites</p>
-    <a href="roteiro-inglaterra-escocia.html" class="btn">Ver Roteiro</a>
-</div>
+                    <div class="roteiro-imagem-wrapper">
+                        <img src="imagens/inglaterra-escocia.jpg" alt="Inglaterra & Escócia">
+                        <div class="badge-ultimas-vagas">Últimas 4 vagas</div>
+                    </div>
+                    <h3>Inglaterra & Escócia</h3>
+                    <p>17 a 29 de setembro<br>13 dias / 11 noites</p>
+                    <a href="roteiro-inglaterra-escocia.html" class="btn">Ver Roteiro</a>
+                </div>
 
-
+                <!-- PUNTA DEL ESTE -->
                 <div class="roteiro-card">
                     <img src="imagens/punta-del-este.jpg" alt="Maratona Punta del Este">
                     <h3>Maratona de Punta del Este</h3>
@@ -80,6 +104,7 @@
                     <a href="roteiro-punta-del-este.html" class="btn">Ver Roteiro</a>
                 </div>
 
+                <!-- AFRICA DO SUL (FECHADO) -->
                 <div class="roteiro-card fechado">
                     <img src="imagens/africa-do-sul.jpg" alt="África do Sul">
                     <span class="tag-fechado">GRUPO FECHADO</span>
@@ -88,6 +113,7 @@
                     <a href="roteiro-africa-do-sul.html" class="btn-secundario">Ver Roteiro</a>
                 </div>
 
+                <!-- PUNTA CANA (FECHADO) -->
                 <div class="roteiro-card fechado">
                     <img src="imagens/punta-cana.jpg" alt="Punta Cana">
                     <span class="tag-fechado">GRUPO FECHADO</span>
@@ -100,6 +126,7 @@
         </div>
     </section>
 
+    <!-- DIFERENCIAIS -->
     <section id="diferenciais" class="diferenciais">
         <div class="container">
             <h2>Nosso DNA</h2>
@@ -135,6 +162,7 @@
         </div>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato" class="contato">
         <div class="container">
             <h2>Entre em Contato</h2>
@@ -189,10 +217,12 @@
 
                 <div class="contato-form">
                     <h3>Envie sua Mensagem</h3>
+
                     <form id="contactForm">
                         <input type="text" name="nome" placeholder="Seu nome" required>
                         <input type="email" name="email" placeholder="Seu e-mail" required>
                         <input type="tel" name="telefone" placeholder="Seu telefone" required>
+
                         <select name="roteiro" required>
                             <option value="">Roteiro de interesse</option>
                             <option value="Inglaterra & Escócia">Inglaterra & Escócia</option>
@@ -201,7 +231,9 @@
                             <option value="Punta Cana">Punta Cana (Lista de Espera)</option>
                             <option value="Outros">Outros destinos</option>
                         </select>
+
                         <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+
                         <button type="submit" class="btn-enviar">Enviar Mensagem</button>
                     </form>
                 </div>
@@ -210,9 +242,10 @@
         </div>
     </section>
 
+    <!-- RODAPÉ -->
     <footer>
         <div class="container">
-            <img src="https://fernandoneto1210-sys.github.io/oficinatur-site/imagens/logo.png" alt="Oficina de Turismo">
+            <img src="imagens/logo.png" alt="Oficina de Turismo" style="height: 60px; width: auto; margin-bottom: 10px;">
             <p>&copy; 2026 Oficina de Turismo - 30 anos transformando sonhos em realidade</p>
         </div>
     </footer>
