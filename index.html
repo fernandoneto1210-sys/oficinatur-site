@@ -8,59 +8,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- MENU -->
-<header>
-    <nav class="navbar">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="imagens/logo.png" alt="Oficina de Turismo">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#roteiros">Roteiros 2026</a></li>
+                    <li><a href="#diferenciais">Nosso DNA</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER VIAGENS EM GRUPO 2026 -->
+    <section class="banner-grupos-2026">
         <div class="container">
-
-            <div class="logo">
-                <a href="index.html">
-                    <img src="imagens/logo.png" alt="Oficina de Turismo">
-                </a>
+            <div class="banner-grupos-conteudo">
+                <h2>Viagens em Grupo 2026</h2>
+                <p>
+                    Roteiros internacionais com acompanhamento especializado, saindo de São Lourenço.
+                    Experiências exclusivas, grupos reduzidos e tudo organizado pela Oficina de Turismo.
+                </p>
+                <a href="#roteiros" class="btn-banner">Conheça os roteiros</a>
             </div>
-
-            <ul class="nav-menu">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#roteiros">Roteiros 2026</a></li>
-                <li><a href="#diferenciais">Nosso DNA</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
         </div>
-    </nav>
-</header>
+    </section>
 
-<!-- BANNER VIAGENS EM GRUPO 2026 -->
-<section class="banner-grupos-2026">
-    <div class="container">
-        <div class="banner-grupos-conteudo">
-            <h2>Viagens em Grupo 2026</h2>
-            <p>
-                Roteiros internacionais com acompanhamento especializado, saindo de São Lourenço.
-                Experiências exclusivas, grupos reduzidos e tudo organizado pela Oficina de Turismo e parceiros.
-            </p>
-            <a href="#roteiros" class="btn-banner">Conheça os roteiros</a>
-        </div>
-    </div>
-</section>
     <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sua Viagem Começa Aqui!</h1>
             <p class="hero-subtitle">Viagens em grupos com acompanhamento personalizado</p>
-
             <div class="hero-badge">
                 <span class="badge-icon">🎉</span>
                 <span class="badge-text">30 anos de experiência em 2026</span>
             </div>
-
             <a href="#roteiros" class="cta-button">Conheça Nossos Roteiros</a>
         </div>
     </section>
@@ -78,7 +74,6 @@
     <section id="roteiros" class="roteiros">
         <div class="container">
             <h2>Roteiros 2026</h2>
-
             <div class="roteiros-grid">
 
                 <!-- INGLATERRA & ESCOCIA -->
@@ -127,7 +122,6 @@
         <div class="container">
             <h2>Nosso DNA</h2>
             <p class="subtitle">O que nos torna únicos em 30 anos de história</p>
-
             <div class="diferenciais-grid">
 
                 <div class="diferencial-card">
@@ -163,7 +157,6 @@
         <div class="container">
             <h2>Entre em Contato</h2>
             <p class="subtitle">Estamos prontos para transformar seu sonho em realidade</p>
-
             <div class="contato-grid">
 
                 <div class="contato-info">
@@ -213,12 +206,10 @@
 
                 <div class="contato-form">
                     <h3>Envie sua Mensagem</h3>
-
                     <form id="contactForm">
                         <input type="text" name="nome" placeholder="Seu nome" required>
                         <input type="email" name="email" placeholder="Seu e-mail" required>
                         <input type="tel" name="telefone" placeholder="Seu telefone" required>
-
                         <select name="roteiro" required>
                             <option value="">Roteiro de interesse</option>
                             <option value="Inglaterra & Escócia">Inglaterra & Escócia</option>
@@ -227,9 +218,7 @@
                             <option value="Punta Cana">Punta Cana (Lista de Espera)</option>
                             <option value="Outros">Outros destinos</option>
                         </select>
-
                         <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-
                         <button type="submit" class="btn-enviar">Enviar Mensagem</button>
                     </form>
                 </div>
