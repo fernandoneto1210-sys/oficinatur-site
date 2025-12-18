@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #1f2933;
 }
@@ -25,8 +25,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 0;
+    padding: 12px 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .navbar .container {
@@ -36,24 +37,34 @@ body {
 }
 
 .logo img {
-    height: 60px;
+    height: 55px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 28px;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: #1f2933;
     font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #2f855a;
+}
+
+.hamburger {
+    display: none;
 }
 
 /* ===== BANNER AZUL ===== */
 .banner-grupos-2026 {
-    margin-top: 80px;
+    margin-top: 75px;
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
     padding: 50px 0;
@@ -62,59 +73,105 @@ body {
 
 .banner-grupos-conteudo h2 {
     font-size: 32px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .banner-grupos-conteudo p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    line-height: 1.6;
 }
 
 .btn-banner {
     background: #ffffff;
     color: #1e3a8a;
-    padding: 12px 28px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-banner:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
 }
 
 /* ===== HERO VERDE ===== */
 .hero {
     background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
-    padding: 60px 0;
+    padding: 70px 0;
     text-align: center;
     color: #ffffff;
 }
 
 .hero-content h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 44px;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 16px;
+    font-size: 19px;
+    margin-bottom: 22px;
+    opacity: 0.95;
 }
 
 .hero-badge {
     display: inline-flex;
     gap: 8px;
+    align-items: center;
     background: rgba(255,255,255,0.15);
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 15px;
 }
 
-/* SEÇÕES GERAIS */
-.sobre, .roteiros, .diferenciais, .contato {
+.badge-icon {
+    font-size: 20px;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
     padding: 60px 0;
+    background: #f7fafc;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1f2933;
+}
+
+.sobre p {
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto 12px auto;
+    color: #52606d;
 }
 
 /* ===== ROTEIROS ===== */
+.roteiros {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.roteiros h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1f2933;
+}
+
 .roteiros-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -123,41 +180,228 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     overflow: hidden;
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roteiro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.roteiro-imagem-wrapper {
+    position: relative;
 }
 
 .roteiro-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
-.badge-ultimas-vagas,
-.tag-fechado {
+.badge-ultimas-vagas {
     position: absolute;
-    background: red;
+    top: 12px;
+    right: 12px;
+    background: #dc2626;
     color: #ffffff;
-    padding: 4px 10px;
+    padding: 6px 12px;
+    border-radius: 4px;
     font-size: 12px;
-    top: 10px;
-    right: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-/* ===== CONTATO ===== */
-.contato-grid {
+.tag-fechado {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #64748b;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.roteiro-card.fechado {
+    opacity: 0.75;
+}
+
+.roteiro-card h3 {
+    font-size: 20px;
+    margin: 16px;
+    color: #1f2933;
+}
+
+.roteiro-card p {
+    font-size: 14px;
+    color: #52606d;
+    margin: 0 16px 16px 16px;
+}
+
+.roteiro-card .btn,
+.roteiro-card .btn-secundario {
+    display: block;
+    text-align: center;
+    margin: 0 16px 16px 16px;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.roteiro-card .btn {
+    background: #2f855a;
+    color: #ffffff;
+}
+
+.roteiro-card .btn:hover {
+    background: #22543d;
+}
+
+.roteiro-card .btn-secundario {
+    background: #e2e8f0;
+    color: #52606d;
+}
+
+.roteiro-card .btn-secundario:hover {
+    background: #cbd5e0;
+}
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais {
+    padding: 60px 0;
+    background: #f7fafc;
+}
+
+.diferenciais h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2933;
+}
+
+.diferenciais .subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #52606d;
+    margin-bottom: 40px;
+}
+
+.diferenciais-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
+.diferencial-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.diferencial-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.diferencial-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1f2933;
+}
+
+.diferencial-card p {
+    font-size: 14px;
+    color: #52606d;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2933;
+}
+
+.contato .subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #52606d;
+    margin-bottom: 40px;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contato-info h3,
+.contato-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1f2933;
+}
+
+.contato-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contato-icon {
+    font-size: 24px;
+}
+
+.contato-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #1f2933;
+}
+
+.contato-item p {
+    font-size: 14px;
+    color: #52606d;
+}
+
+.contato-item a {
+    color: #2f855a;
+    text-decoration: none;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+}
+
 .contato-form input,
-.contato-form textarea,
-.contato-form select {
+.contato-form select,
+.contato-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
+    margin-bottom: 14px;
+    border: 1px solid #cbd5e0;
     border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.contato-form input:focus,
+.contato-form select:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: #2f855a;
 }
 
 .btn-enviar {
@@ -167,18 +411,83 @@ body {
     color: #ffffff;
     border: none;
     border-radius: 4px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: #22543d;
 }
 
 /* ===== RODAPÉ ===== */
 footer {
     background: #1f2933;
     color: #ffffff;
-    text-align: center;
     padding: 40px 0;
+    text-align: center;
 }
 
 footer img {
     height: 60px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #cbd5e0;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #1f2933;
+        border-radius: 2px;
+    }
+
+    .banner-grupos-2026 {
+        padding: 40px 20px;
+        margin-top: 70px;
+    }
+
+    .banner-grupos-conteudo h2 {
+        font-size: 26px;
+    }
+
+    .banner-grupos-conteudo p {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .sobre,
+    .roteiros,
+    .diferenciais,
+    .contato {
+        padding: 40px 0;
+    }
 }
