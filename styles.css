@@ -104,14 +104,18 @@ header {
     transition: 0.3s;
 }
 
-/* ===== HERO (VERDE, AGORA EM CIMA) ===== */
-.hero {
-    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
-    padding: 100px 0 70px 0;
-    margin-top: 80px;  /* espaço para o menu fixo */
-    text-align: center;
-    color: #ffffff;
-}
+<!-- HERO VERDE (AGORA EM CIMA) -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Sua Viagem Começa Aqui!</h1>
+        <p class="hero-subtitle">Viagens em grupos com acompanhamento personalizado</p>
+        <div class="hero-badge">
+            <span class="badge-icon">🎉</span>
+            <span class="badge-text">30 anos de experiência em 2026</span>
+        </div>
+    </div>
+</section>
+
 
 .hero-content h1 {
     font-size: 42px;
