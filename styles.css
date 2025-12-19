@@ -633,6 +633,10 @@ footer p {
 
 /* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
+    .logo img {
+        height: 75px;  /* AUMENTADO (era 60px) */
+    }
+
 
     /* MENU HAMBURGER */
     .hamburger {
