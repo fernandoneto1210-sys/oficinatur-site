@@ -164,63 +164,404 @@ body {
     color: #52606d;
 }
 
-/* ===== HERO DOS ROTEIROS ===== */
+/* ===== ROTEIROS (CARDS NA HOME) ===== */
+.roteiros {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.roteiros h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1f2933;
+}
+
+.roteiros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.roteiro-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roteiro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.roteiro-imagem-wrapper {
+    position: relative;
+}
+
+.roteiro-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.badge-ultimas-vagas {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #dc2626;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tag-fechado {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #64748b;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.roteiro-card.fechado {
+    opacity: 0.75;
+}
+
+.roteiro-card h3 {
+    font-size: 20px;
+    margin: 16px;
+    color: #1f2933;
+}
+
+.roteiro-card p {
+    font-size: 14px;
+    color: #52606d;
+    margin: 0 16px 16px 16px;
+}
+
+.roteiro-card .btn,
+.roteiro-card .btn-secundario {
+    display: block;
+    text-align: center;
+    margin: 0 16px 16px 16px;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.roteiro-card .btn {
+    background: #2f855a;
+    color: #ffffff;
+}
+
+.roteiro-card .btn:hover {
+    background: #22543d;
+}
+
+.roteiro-card .btn-secundario {
+    background: #e2e8f0;
+    color: #52606d;
+}
+
+.roteiro-card .btn-secundario:hover {
+    background: #cbd5e0;
+}
+
+/* ===== PÁGINAS INDIVIDUAIS DOS ROTEIROS ===== */
+
+/* Breadcrumb */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #52606d;
+}
+
+.breadcrumb a {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Hero do roteiro (imagem + título + info) */
 .roteiro-hero {
     position: relative;
-    text-align: center;
-    color: #ffffff;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .roteiro-hero img {
     width: 100%;
-    height: 320px;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 5px solid #2f855a;
+    object-position: center;
 }
 
 .roteiro-hero-content {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.45);
-    padding: 14px 20px;
-    border-radius: 6px;
-    max-width: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: #ffffff;
+    padding: 40px 20px 30px 20px;
+    text-align: center;
 }
 
 .roteiro-hero-content h1 {
-    font-size: 24px;
-    margin-bottom: 6px;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .roteiro-hero-subtitle {
-    font-size: 14px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    opacity: 0.95;
 }
 
 .roteiro-hero-info {
-    font-size: 12px;
     display: flex;
-    gap: 10px;
     justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-top: 8px;
+    font-size: 15px;
 }
 
-/* MOBILE AJUSTE */
+.roteiro-hero-info span {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Detalhes do roteiro */
+.roteiro-detalhes {
+    padding: px 0;
+    background: #f7fafc;
+}
+
+.roteiro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.roteiro-main {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.roteiro-section {
+    margin-bottom: 40px;
+}
+
+.roteiro-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #1f2933;
+    border-bottom: 2px solid #2f855a;
+    padding-bottom: 8px;
+}
+
+.roteiro-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #52606d;
+    margin-bottom: 12px;
+}
+
+.roteiro-destaques-list {
+    list-style: none;
+    padding: 0;
+}
+
+.roteiro-destaques-list li {
+    font-size: 16px;
+    color: #52606d;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.roteiro-destaques-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2f855a;
+    font-weight: bold;
+}
+
+/* Itinerário dia a dia */
+.dia-item {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2f855a;
+}
+
+.dia-item h3 {
+    font-size: 18px;
+    color: #1f2933;
+    margin-bottom: 10px;
+}
+
+.dia-item p {
+    font-size: 15px;
+    color: #52606d;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* O que está incluído */
+.roteiro-incluso {
+    background: #e6f7ed;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.roteiro-incluso h3 {
+    font-size: 22px;
+    color: #1f2933;
+    margin-bottom: 15px;
+}
+
+.roteiro-incluso ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roteiro-incluso li {
+    font-size: 16px;
+    color: #52606d;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.roteiro-incluso li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2f855a;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn-pdf,
+.btn-contato {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-pdf {
+    background: #1e3a8a;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-pdf:hover {
+    background: #0f172a;
+}
+
+.btn-contato {
+    background: #25d366;
+    color: #ffffff;
+}
+
+.btn-contato:hover {
+    background: #1da851;
+}
+
+/* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
-    .roteiro-hero img {
-        height: 240px;
+    /* Hero do roteiro em mobile */
+    .roteiro-hero {
+        height: 300px;
     }
+
     .roteiro-hero-content {
-        bottom: 10px;
-        padding: 10px 14px;
+        padding: 25px 15px 20px 15px;
     }
+
     .roteiro-hero-content h1 {
-        font-size: 19px;
+        font-size: 26px;
+    }
+
+    .roteiro-hero-subtitle {
+        font-size: 15px;
+    }
+
+    .roteiro-hero-info {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .roteiro-hero-info span {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    /* Detalhes do roteiro em mobile */
+    .roteiro-main {
+        padding: 20px 15px;
+    }
+
+    .roteiro-section h2 {
+        font-size: 22px;
+    }
+
+    .roteiro-section p {
+        font-size: 15px;
+    }
+
+    .dia-item {
+        padding: 15px;
+    }
+
+    .dia-item h3 {
+        font-size: 16px;
+    }
+
+    .dia-item p {
+        font-size: 14px;
+    }
+
+    .btn-pdf,
+    .btn-contato {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
     }
 }
-
 /* ===== DIFERENCIAIS ===== */
 .diferenciais {
     padding: 60px 0;
