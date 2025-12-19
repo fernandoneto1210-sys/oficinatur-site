@@ -4,11 +4,11 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-}
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
 
 // Fechar menu ao clicar em um link
 document.querySelectorAll('.nav-menu a').forEach(link => {
