@@ -665,6 +665,13 @@ footer p {
 /* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
 
+    /* Ajuste de espaço do banner azul */
+    .banner-grupos-2026 {
+        padding: 40px 20px;
+        margin-top: 140px;  /* AQUI ESTÁ A CORREÇÃO */
+    }
+}
+
         /* ===== MENU MOBILE MELHORADO ===== */
     .navbar .container {
         flex-direction: column;
