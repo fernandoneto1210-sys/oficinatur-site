@@ -665,14 +665,7 @@ footer p {
 /* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
 
-    /* Ajuste de espaço do banner azul */
-    .banner-grupos-2026 {
-        padding: 40px 20px;
-        margin-top: 140px;  /* AQUI ESTÁ A CORREÇÃO */
-    }
-}
-
-        /* ===== MENU MOBILE MELHORADO ===== */
+    /* ===== MENU MOBILE MELHORADO ===== */
     .navbar .container {
         flex-direction: column;
         align-items: center;
@@ -706,18 +699,21 @@ footer p {
     .hamburger {
         display: none;
     }
-    /* BANNER AZUL */
+
+    /* BANNER AZUL - AJUSTADO PARA NÃO CORTAR */
     .banner-grupos-2026 {
         padding: 40px 20px;
-        margin-top: 95px;
+        margin-top: 130px;
     }
 
     .banner-grupos-conteudo h2 {
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 1.3;
     }
 
     .banner-grupos-conteudo p {
         font-size: 14px;
+        line-height: 1.5;
     }
 
     /* HERO VERDE */
@@ -753,7 +749,7 @@ footer p {
 
     /* HERO DAS PÁGINAS DE ROTEIRO DETALHADO */
     .roteiro-hero {
-        margin-top: 95px;
+        margin-top: 130px;
         height: 300px;
     }
 
