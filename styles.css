@@ -37,7 +37,7 @@ body {
 }
 
 .logo img {
-    height: 90px;
+    height: 110px;
     width: auto;
     transition: transform 0.2s ease;
 }
@@ -78,7 +78,7 @@ body {
 
 /* ===== BANNER AZUL ===== */
 .banner-grupos-2026 {
-    margin-top: 75px;
+    margin-top: 105px;
     background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     color: #ffffff;
     padding: 50px 0;
@@ -204,12 +204,18 @@ body {
 
 .roteiro-imagem-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 .roteiro-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.roteiro-card:hover img {
+    transform: scale(1.05);
 }
 
 .badge-ultimas-vagas {
@@ -218,9 +224,9 @@ body {
     right: 12px;
     background: #dc2626;
     color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -228,12 +234,12 @@ body {
 .tag-fechado {
     position: absolute;
     top: 12px;
-    left: 12px;
+    right: 12px;
     background: #64748b;
     color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -244,23 +250,23 @@ body {
 
 .roteiro-card h3 {
     font-size: 20px;
-    margin: 16px;
+    margin: 18px 20px 10px 20px;
     color: #1f2933;
 }
 
 .roteiro-card p {
     font-size: 14px;
     color: #52606d;
-    margin: 0 16px 16px 16px;
+    margin: 0 20px 18px 20px;
 }
 
 .roteiro-card .btn,
 .roteiro-card .btn-secundario {
     display: block;
     text-align: center;
-    margin: 0 16px 16px 16px;
-    padding: 10px;
-    border-radius: 4px;
+    margin: 0 20px 20px 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -273,41 +279,23 @@ body {
 }
 
 .roteiro-card .btn:hover {
-    background: #22543d;
+    background: #276749;
 }
 
 .roteiro-card .btn-secundario {
     background: #e2e8f0;
-    color: #52606d;
+    color: #1f2933;
 }
 
 .roteiro-card .btn-secundario:hover {
     background: #cbd5e0;
 }
 
-/* ===== PÁGINAS INDIVIDUAIS DOS ROTEIROS ===== */
-
-.breadcrumb {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    font-size: 14px;
-    color: #52606d;
-}
-
-.breadcrumb a {
-    color: #1e3a8a;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
+/* ===== PÁGINAS DE ROTEIRO DETALHADO ===== */
 .roteiro-hero {
     position: relative;
-    width: 100%;
-    height: 400px;
+    height: 450px;
+    margin-top: 105px;
     overflow: hidden;
 }
 
@@ -315,7 +303,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .roteiro-hero-content {
@@ -326,7 +313,6 @@ body {
     background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
     color: #ffffff;
     padding: 40px 20px 30px 20px;
-    text-align: center;
 }
 
 .roteiro-hero-content h1 {
@@ -343,34 +329,22 @@ body {
 
 .roteiro-hero-info {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
     font-size: 15px;
 }
 
 .roteiro-hero-info span {
-    background: rgba(255,255,255,0.15);
-    padding: 6px 12px;
-    border-radius: 4px;
-}
-
-.roteiro-detalhes {
-    padding: 50px 0;
-    background: #f7fafc;
-}
-
-.roteiro-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 .roteiro-main {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .roteiro-section {
@@ -378,126 +352,90 @@ body {
 }
 
 .roteiro-section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
     color: #1f2933;
-    border-bottom: 2px solid #2f855a;
-    padding-bottom: 8px;
+    border-bottom: 3px solid #2f855a;
+    padding-bottom: 10px;
 }
 
 .roteiro-section p {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #52606d;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.roteiro-destaques-list {
+.roteiro-section ul {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-.roteiro-destaques-list li {
+.roteiro-section ul li {
+    padding: 8px 0 8px 30px;
+    position: relative;
     font-size: 16px;
     color: #52606d;
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
 }
 
-.roteiro-destaques-list li:before {
+.roteiro-section ul li:before {
     content: "✓";
     position: absolute;
     left: 0;
     color: #2f855a;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .dia-item {
     background: #f7fafc;
     padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
     border-left: 4px solid #2f855a;
 }
 
 .dia-item h3 {
     font-size: 18px;
-    color: #1f2933;
     margin-bottom: 10px;
+    color: #1f2933;
 }
 
 .dia-item p {
     font-size: 15px;
     color: #52606d;
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.roteiro-incluso {
-    background: #e6f7ed;
-    padding: 25px;
-    border-radius: 8px;
-    margin-top: 30px;
-}
-
-.roteiro-incluso h3 {
-    font-size: 22px;
-    color: #1f2933;
-    margin-bottom: 15px;
-}
-
-.roteiro-incluso ul {
-    list-style: none;
-    padding: 0;
-}
-
-.roteiro-incluso li {
-    font-size: 16px;
-    color: #52606d;
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.roteiro-incluso li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2f855a;
-    font-weight: bold;
+    margin: 0;
 }
 
 .btn-pdf,
 .btn-contato {
     display: inline-block;
-    padding: 12px 28px;
-    margin: 10px;
+    padding: 12px 30px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
     transition: all 0.3s ease;
-    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .btn-pdf {
-    background: #1e3a8a;
+    background: #dc2626;
     color: #ffffff;
-    border: none;
 }
 
 .btn-pdf:hover {
-    background: #0f172a;
+    background: #b91c1c;
 }
 
 .btn-contato {
-    background: #25d366;
+    background: #2f855a;
     color: #ffffff;
 }
 
 .btn-contato:hover {
-    background: #1da851;
+    background: #276749;
 }
 
 /* ===== DIFERENCIAIS ===== */
@@ -613,6 +551,66 @@ body {
     text-decoration: underline;
 }
 
+/* ===== FORMULÁRIO DE CONTATO ===== */
+.contato-form {
+    background: #f7fafc;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contato-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1f2933;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato-form input,
+.contato-form textarea,
+.contato-form select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus,
+.contato-form select:focus {
+    outline: none;
+    border-color: #2f855a;
+}
+
+.contato-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    background: #2f855a;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background: #276749;
+    transform: translateY(-2px);
+}
+
 /* ===== RODAPÉ ===== */
 footer {
     background: #1f2933;
@@ -633,10 +631,6 @@ footer p {
 
 /* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
-    .logo img {
-        height: 75px;  /* AUMENTADO (era 60px) */
-    }
-
 
     /* MENU HAMBURGER */
     .hamburger {
@@ -674,13 +668,13 @@ footer p {
     }
 
     .logo img {
-        height: 60px;
+        height: 75px;
     }
 
     /* BANNER AZUL */
     .banner-grupos-2026 {
         padding: 40px 20px;
-        margin-top: 75px;
+        margin-top: 90px;
     }
 
     .banner-grupos-conteudo h2 {
@@ -726,7 +720,7 @@ footer p {
 
     /* HERO DOS ROTEIROS DETALHADOS */
     .roteiro-hero {
-        margin-top: 75px;
+        margin-top: 90px;
         height: 300px;
     }
 
@@ -782,5 +776,14 @@ footer p {
         width: 100%;
         margin: 10px 0;
         text-align: center;
+    }
+
+    /* FORMULÁRIO MOBILE */
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-form {
+        padding: 20px;
     }
 }
