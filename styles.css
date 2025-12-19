@@ -290,143 +290,142 @@ body {
 .roteiro-card .btn-secundario:hover {
     background: #cbd5e0;
 }
-/* ===== CARD NOVOS GRUPOS EM BREVE ===== */
-.card-novos-grupos {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-    color: #ffffff;
-    padding: 40px 30px;
+/* ===== CARD DE NOVOS ROTEIROS ===== */
+.card-novos-roteiros {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #2f855a 0%, #22543d 100%);
     border-radius: 12px;
+    padding: 40px;
     text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
-    animation: pulse-glow 2s ease-in-out infinite;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(47, 133, 90, 0.3);
 }
 
-@keyframes pulse-glow {
-    0%, 100% {
-        box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
-    }
-    50% {
-        box-shadow: 0 8px 32px rgba(249, 115, 22, 0.5);
-    }
-}
-
-.novos-grupos-header {
+.novos-roteiros-header {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 
-.novos-grupos-header h3 {
+.icone-novidade {
+    font-size: 36px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.novos-roteiros-header h3 {
     font-size: 28px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     margin: 0;
 }
 
-.icone-destaque {
-    font-size: 32px;
-    animation: bounce 1s ease-in-out infinite;
+.novos-roteiros-subtitulo {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.95;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-.novos-grupos-lista {
+.novos-roteiros-lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
 .novo-destino {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 16px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .novo-destino:hover {
     background: rgba(255, 255, 255, 0.25);
-    transform: translateX(5px);
+    transform: translateY(-3px);
 }
 
-.icone-aviao {
-    font-size: 22px;
+.icone-destino {
+    font-size: 28px;
 }
 
-.novos-grupos-destaque {
-    font-size: 18px;
-    margin: 20px 0;
-    padding: 15px;
+.novo-destino strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.novos-roteiros-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: rgba(255, 255, 255, 0.2);
+    padding: 16px;
     border-radius: 8px;
+    margin-bottom: 25px;
 }
 
-.novos-grupos-destaque strong {
-    font-size: 19px;
+.icone-check {
+    font-size: 24px;
 }
 
-.btn-novos-grupos {
+.novos-roteiros-destaque p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.btn-novos-roteiros {
     display: inline-block;
     background: #ffffff;
-    color: #f97316;
+    color: #2f855a;
     padding: 14px 32px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-novos-grupos:hover {
-    background: #fef3c7;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+.btn-novos-roteiros:hover {
+    background: #f0fdf4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 /* RESPONSIVO MOBILE */
 @media (max-width: 768px) {
-    .card-novos-grupos {
+    .card-novos-roteiros {
+        margin-top: 30px;
         padding: 30px 20px;
     }
 
-    .novos-grupos-header h3 {
+    .novos-roteiros-header h3 {
         font-size: 22px;
     }
 
-    .novos-grupos-lista {
+    .novos-roteiros-lista {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
     .novo-destino {
-        font-size: 16px;
-        padding: 10px 16px;
+        padding: 12px;
     }
 
-    .novos-grupos-destaque {
-        font-size: 16px;
+    .icone-destino {
+        font-size: 24px;
     }
 
-    .btn-novos-grupos {
-        width: 100%;
-        padding: 12px 20px;
+    .novo-destino strong {
+        font-size: 15px;
     }
 }
 
