@@ -797,26 +797,104 @@ footer p {
   border-radius: 2px;
   transition: 0.3s;
 }
-
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #ffffff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px 0;
-  }
+    /* LOGO */
+    .logo img {
+        height: 65px;
+        width: auto;
+    }
 
-  .nav-menu.active {
-    display: flex;
-  }
+    /* MENU – MANTER VISÍVEL EM MOBILE */
+    .navbar .container {
+        padding: 10px 12px;
+        gap: 8px;
+    }
 
-  .hamburger {
-    display: flex;
-  }
+    .nav-menu {
+        display: flex;
+        gap: 8px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-menu li a {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* BANNER AZUL */
+    .banner-grupos-2026 {
+        padding: 40px 20px;
+        margin-top: 70px;
+    }
+
+    .banner-grupos-conteudo h2 {
+        font-size: 26px;
+    }
+
+    .banner-grupos-conteudo p {
+        font-size: 14px;
+    }
+
+    /* HERO VERDE */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* SEÇÕES GERAIS */
+    .sobre,
+    .roteiros,
+    .diferenciais,
+    .contato {
+        padding: 40px 0;
+    }
+
+    /* CARDS DE ROTEIROS NA HOME */
+    .roteiros-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .roteiro-card img {
+        height: 200px;
+    }
+
+    /* HERO DAS PÁGINAS DE ROTEIRO DETALHADO */
+    .roteiro-hero {
+        margin-top: 70px;
+    }
+
+    .roteiro-hero img {
+        max-height: 260px;
+    }
+
+    .roteiro-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .roteiro-hero-subtitle {
+        font-size: 14px;
+    }
+
+    .roteiro-hero-info {
+        font-size: 13px;
+    }
+
+    .roteiro-main {
+        padding: 0 16px;
+    }
 }
+
