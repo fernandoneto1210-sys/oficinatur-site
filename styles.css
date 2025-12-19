@@ -37,15 +37,9 @@ body {
 }
 
 .logo img {
-  height: 80px;
-  width: auto;
-  transition: transform 0.2s ease;
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    height: 65px; /* ainda grande mas proporcional no mobile */
-  }
+    height: 80px;
+    width: auto;
+    transition: transform 0.2s ease;
 }
 
 .nav-menu {
@@ -353,7 +347,7 @@ body {
 
 /* Detalhes do roteiro */
 .roteiro-detalhes {
-    padding: px 0;
+    padding: 50px 0;
     background: #f7fafc;
 }
 
@@ -500,68 +494,6 @@ body {
     background: #1da851;
 }
 
-/* ===== RESPONSIVO MOBILE ===== */
-@media (max-width: 768px) {
-    /* Hero do roteiro em mobile */
-    .roteiro-hero {
-        height: 300px;
-    }
-
-    .roteiro-hero-content {
-        padding: 25px 15px 20px 15px;
-    }
-
-    .roteiro-hero-content h1 {
-        font-size: 26px;
-    }
-
-    .roteiro-hero-subtitle {
-        font-size: 15px;
-    }
-
-    .roteiro-hero-info {
-        font-size: 13px;
-        gap: 10px;
-    }
-
-    .roteiro-hero-info span {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-
-    /* Detalhes do roteiro em mobile */
-    .roteiro-main {
-        padding: 20px 15px;
-    }
-
-    .roteiro-section h2 {
-        font-size: 22px;
-    }
-
-    .roteiro-section p {
-        font-size: 15px;
-    }
-
-    .dia-item {
-        padding: 15px;
-    }
-
-    .dia-item h3 {
-        font-size: 16px;
-    }
-
-    .dia-item p {
-        font-size: 14px;
-    }
-
-    .btn-pdf,
-    .btn-contato {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-        text-align: center;
-    }
-}
 /* ===== DIFERENCIAIS ===== */
 .diferenciais {
     padding: 60px 0;
@@ -730,97 +662,37 @@ footer p {
     color: #cbd5e0;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
 
-    .hamburger {
-        display: flex;
+    /* ===== MENU MOBILE MELHORADO ===== */
+    .navbar .container {
         flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
     }
 
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background: #1f2933;
-        border-radius: 2px;
-    }
-
-    .banner-grupos-2026 {
-        padding: 40px 20px;
-        margin-top: 70px;
-    }
-
-    .banner-grupos-conteudo h2 {
-        font-size: 26px;
-    }
-
-    .banner-grupos-conteudo p {
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-
-    .sobre,
-    .roteiros,
-    .diferenciais,
-    .contato {
-        padding: 40px 0;
-    }
-}
-/* ===== MENU HAMBURGER FUNCTIONAL ===== */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: #1f2933;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-@media (max-width: 768px) {
-    /* LOGO */
     .logo img {
         height: 65px;
         width: auto;
-    }
-
-    /* MENU – MANTER VISÍVEL EM MOBILE */
-    .navbar .container {
-        padding: 10px 12px;
-        gap: 8px;
+        display: block;
+        margin: 0 auto;
     }
 
     .nav-menu {
         display: flex;
-        gap: 8px;
-        font-size: 12px;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        gap: 10px 14px;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 8px;
     }
 
     .nav-menu li a {
-        font-size: 12px;
-        padding: 4px 6px;
+        font-size: 13px;
+        padding: 4px 8px;
+        white-space: nowrap;
     }
 
     .hamburger {
@@ -830,7 +702,7 @@ footer p {
     /* BANNER AZUL */
     .banner-grupos-2026 {
         padding: 40px 20px;
-        margin-top: 70px;
+        margin-top: 95px;
     }
 
     .banner-grupos-conteudo h2 {
@@ -874,11 +746,12 @@ footer p {
 
     /* HERO DAS PÁGINAS DE ROTEIRO DETALHADO */
     .roteiro-hero {
-        margin-top: 70px;
+        margin-top: 95px;
+        height: 300px;
     }
 
-    .roteiro-hero img {
-        max-height: 260px;
+    .roteiro-hero-content {
+        padding: 25px 15px 20px 15px;
     }
 
     .roteiro-hero-content h1 {
@@ -891,10 +764,43 @@ footer p {
 
     .roteiro-hero-info {
         font-size: 13px;
+        gap: 10px;
+    }
+
+    .roteiro-hero-info span {
+        padding: 5px 10px;
+        font-size: 12px;
     }
 
     .roteiro-main {
-        padding: 0 16px;
+        padding: 20px 15px;
+    }
+
+    .roteiro-section h2 {
+        font-size: 22px;
+    }
+
+    .roteiro-section p {
+        font-size: 15px;
+    }
+
+    .dia-item {
+        padding: 15px;
+    }
+
+    .dia-item h3 {
+        font-size: 16px;
+    }
+
+    .dia-item p {
+        font-size: 14px;
+    }
+
+    .btn-pdf,
+    .btn-contato {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
     }
 }
-
