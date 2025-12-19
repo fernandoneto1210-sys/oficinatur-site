@@ -164,119 +164,61 @@ body {
     color: #52606d;
 }
 
-/* ===== ROTEIROS ===== */
-.roteiros {
-    padding: 60px 0;
-    background: #ffffff;
-}
-
-.roteiros h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #1f2933;
-}
-
-.roteiros-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.roteiro-card {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.roteiro-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.roteiro-imagem-wrapper {
+/* ===== HERO DOS ROTEIROS ===== */
+.roteiro-hero {
     position: relative;
-}
-
-.roteiro-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.badge-ultimas-vagas {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: #dc2626;
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.tag-fechado {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: #64748b;
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.roteiro-card.fechado {
-    opacity: 0.75;
-}
-
-.roteiro-card h3 {
-    font-size: 20px;
-    margin: 16px;
-    color: #1f2933;
-}
-
-.roteiro-card p {
-    font-size: 14px;
-    color: #52606d;
-    margin: 0 16px 16px 16px;
-}
-
-.roteiro-card .btn,
-.roteiro-card .btn-secundario {
-    display: block;
     text-align: center;
-    margin: 0 16px 16px 16px;
-    padding: 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.roteiro-card .btn {
-    background: #2f855a;
     color: #ffffff;
 }
 
-.roteiro-card .btn:hover {
-    background: #22543d;
+.roteiro-hero img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 5px solid #2f855a;
 }
 
-.roteiro-card .btn-secundario {
-    background: #e2e8f0;
-    color: #52606d;
+.roteiro-hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.45);
+    padding: 14px 20px;
+    border-radius: 6px;
+    max-width: 90%;
 }
 
-.roteiro-card .btn-secundario:hover {
-    background: #cbd5e0;
+.roteiro-hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.roteiro-hero-subtitle {
+    font-size: 14px;
+}
+
+.roteiro-hero-info {
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+/* MOBILE AJUSTE */
+@media (max-width: 768px) {
+    .roteiro-hero img {
+        height: 240px;
+    }
+    .roteiro-hero-content {
+        bottom: 10px;
+        padding: 10px 14px;
+    }
+    .roteiro-hero-content h1 {
+        font-size: 19px;
+    }
 }
 
 /* ===== DIFERENCIAIS ===== */
