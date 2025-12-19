@@ -665,16 +665,16 @@ footer p {
 /* ===== RESPONSIVO MOBILE ===== */
 @media (max-width: 768px) {
 
-    /* ===== MENU MOBILE MELHORADO ===== */
+        /* ===== MENU MOBILE MELHORADO ===== */
     .navbar .container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding: 12px 0;
+        gap: 12px;
+        padding: 14px 0;
     }
 
     .logo img {
-        height: 65px;
+        height: 68px;
         width: auto;
         display: block;
         margin: 0 auto;
@@ -683,22 +683,22 @@ footer p {
     .nav-menu {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 14px;
+        gap: 16px 18px;
         justify-content: center;
         text-align: center;
-        padding-bottom: 8px;
+        padding-bottom: 10px;
+        max-width: 100%;
     }
 
     .nav-menu li a {
-        font-size: 13px;
-        padding: 4px 8px;
+        font-size: 14px;
+        padding: 6px 10px;
         white-space: nowrap;
     }
 
     .hamburger {
         display: none;
     }
-
     /* BANNER AZUL */
     .banner-grupos-2026 {
         padding: 40px 20px;
