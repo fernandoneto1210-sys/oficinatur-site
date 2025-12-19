@@ -37,10 +37,16 @@ body {
 }
 
 .logo img {
-    height: 70px;
-    width: auto;
+  height: 80px;
+  width: auto;
+  transition: transform 0.2s ease;
 }
 
+@media (max-width: 768px) {
+  .logo img {
+    height: 65px; /* ainda grande mas proporcional no mobile */
+  }
+}
 
 .nav-menu {
     display: flex;
