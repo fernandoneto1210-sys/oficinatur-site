@@ -66,9 +66,7 @@
             transition: var(--transition);
         }
 
-        header.scrolled {
-            box-shadow: var(--shadow-md);
-        }
+        header.scrolled { box-shadow: var(--shadow-md); }
 
         .navbar .container {
             display: flex;
@@ -122,11 +120,7 @@
             font-weight: 600 !important;
         }
 
-        .nav-cta:hover {
-            background: var(--gold-dark) !important;
-            color: #fff !important;
-        }
-
+        .nav-cta:hover { background: var(--gold-dark) !important; color: #fff !important; }
         .nav-cta::after { display: none !important; }
 
         .hamburger {
@@ -145,7 +139,7 @@
         }
 
         /* =============================================
-           HERO — BANNER PRINCIPAL
+           HERO
         ============================================= */
         #home {
             min-height: 100vh;
@@ -156,7 +150,7 @@
                     rgba(26,58,92,0.45) 50%,
                     rgba(0,0,0,0.60) 100%
                 ),
-                url('imagens/hero-bg.jpg') center/cover no-repeat;
+                url('imagens/2.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -287,7 +281,6 @@
             background: var(--blue-nav);
             color: #fff;
             padding: 18px 0;
-            overflow: hidden;
         }
 
         .strip-inner {
@@ -307,9 +300,7 @@
             letter-spacing: 0.03em;
         }
 
-        .strip-item span.icon {
-            font-size: 1.1rem;
-        }
+        .strip-item span.icon { font-size: 1.1rem; }
 
         .strip-divider {
             width: 1px; height: 22px;
@@ -317,18 +308,17 @@
         }
 
         /* =============================================
-           SOBRE NÓS — SEÇÃO ELEGANTE
+           SOBRE NÓS — CENTRALIZADO (sem foto)
         ============================================= */
         #sobre {
             padding: 100px 0;
             background: var(--warm-white);
         }
 
-        .sobre-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+        .sobre-centro {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .sobre-label {
@@ -341,7 +331,7 @@
             margin-bottom: 16px;
         }
 
-        .sobre-texto h2 {
+        .sobre-centro h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.9rem, 3.5vw, 2.6rem);
             font-weight: 600;
@@ -350,36 +340,51 @@
             margin-bottom: 24px;
         }
 
-        .sobre-texto h2 em {
+        .sobre-centro h2 em {
             font-style: italic;
             color: var(--gold-dark);
         }
 
-        .sobre-texto p {
-            font-size: 1rem;
+        .sobre-centro p {
+            font-size: 1.05rem;
             color: var(--gray-mid);
             margin-bottom: 18px;
             line-height: 1.85;
+        }
+
+        /* LINHA DOURADA DECORATIVA */
+        .sobre-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            border-radius: 2px;
+            margin: 32px auto;
         }
 
         .sobre-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            margin-top: 40px;
+            margin-top: 48px;
         }
 
         .stat-item {
             text-align: center;
-            padding: 24px 16px;
+            padding: 28px 16px;
             background: var(--sand);
             border-radius: var(--radius-sm);
             border-bottom: 3px solid var(--gold);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
         }
 
         .stat-numero {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 700;
             color: var(--gold-dark);
             display: block;
@@ -392,47 +397,8 @@
             color: var(--gray-mid);
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-top: 6px;
+            margin-top: 8px;
             display: block;
-        }
-
-        .sobre-imagem {
-            position: relative;
-        }
-
-        .sobre-imagem img {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .sobre-imagem-badge {
-            position: absolute;
-            bottom: -24px;
-            left: -24px;
-            background: var(--gold);
-            color: #fff;
-            padding: 20px 24px;
-            border-radius: var(--radius-sm);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-        }
-
-        .sobre-imagem-badge strong {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            display: block;
-            line-height: 1;
-        }
-
-        .sobre-imagem-badge span {
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            opacity: 0.9;
         }
 
         /* =============================================
@@ -482,7 +448,6 @@
             margin-bottom: 60px;
         }
 
-        /* CARD PRINCIPAL — DESTAQUE */
         .roteiro-card {
             background: var(--warm-white);
             border-radius: var(--radius);
@@ -500,6 +465,7 @@
             box-shadow: var(--shadow-lg);
         }
 
+        /* CARD DESTAQUE — ocupa linha inteira */
         .roteiro-card.destaque {
             grid-column: 1 / -1;
             flex-direction: row;
@@ -511,9 +477,7 @@
             overflow: hidden;
         }
 
-        .roteiro-card:not(.destaque) .card-imagem {
-            height: 220px;
-        }
+        .roteiro-card:not(.destaque) .card-imagem { height: 220px; }
 
         .roteiro-card.destaque .card-imagem {
             width: 50%;
@@ -527,9 +491,7 @@
             transition: transform 0.6s ease;
         }
 
-        .roteiro-card:hover .card-imagem img {
-            transform: scale(1.05);
-        }
+        .roteiro-card:hover .card-imagem img { transform: scale(1.05); }
 
         /* TAGS */
         .card-tags {
@@ -553,7 +515,7 @@
         .tag-outubro    { background: var(--blue-nav); color: #fff; }
         .tag-novidade   { background: #9B59B6; color: #fff; }
         .tag-breve      { background: var(--gray-mid); color: #fff; }
-        .tag-fechado    { background: #E74C3C; color: #fff; }
+        .tag-maio       { background: #E67E22; color: #fff; }
 
         /* CONTEÚDO DO CARD */
         .card-body {
@@ -581,9 +543,7 @@
             line-height: 1.3;
         }
 
-        .roteiro-card.destaque .card-body h3 {
-            font-size: 1.75rem;
-        }
+        .roteiro-card.destaque .card-body h3 { font-size: 1.75rem; }
 
         .card-datas {
             display: flex;
@@ -592,6 +552,7 @@
             font-size: 0.85rem;
             color: var(--gray-mid);
             margin-bottom: 12px;
+            flex-wrap: wrap;
         }
 
         .card-datas .dot {
@@ -658,7 +619,7 @@
         }
 
         /* =============================================
-           CARD NOVOS DESTINOS 2027
+           NOVOS DESTINOS
         ============================================= */
         .novos-destinos-section {
             background: var(--blue-nav);
@@ -710,7 +671,6 @@
             border-radius: 50px;
             font-size: 0.83rem;
             font-weight: 500;
-            backdrop-filter: blur(4px);
         }
 
         .novos-destinos-cta {
@@ -745,7 +705,7 @@
         }
 
         /* =============================================
-           DIFERENCIAIS — DNA
+           DIFERENCIAIS
         ============================================= */
         #diferenciais {
             padding: 100px 0;
@@ -809,7 +769,7 @@
         }
 
         /* =============================================
-           TIMELINE — 30 ANOS DE HISTÓRIA
+           TIMELINE
         ============================================= */
         .timeline-section {
             padding: 100px 0;
@@ -833,7 +793,7 @@
         .timeline-anos::before {
             content: '';
             position: absolute;
-            top: 50%; left: 0; right: 0;
+            top: 7px; left: 0; right: 0;
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
             z-index: 0;
@@ -977,9 +937,7 @@
             margin-bottom: 32px;
         }
 
-        .form-group {
-            margin-bottom: 18px;
-        }
+        .form-group { margin-bottom: 18px; }
 
         .form-group label {
             display: block;
@@ -1078,10 +1036,7 @@
 
         .footer-links a:hover { color: var(--gold-light); }
 
-        .footer-social {
-            display: flex;
-            gap: 12px;
-        }
+        .footer-social { display: flex; gap: 12px; }
 
         .social-btn {
             width: 38px; height: 38px;
@@ -1096,16 +1051,9 @@
             transition: var(--transition);
         }
 
-        .social-btn:hover {
-            background: var(--gold);
-            color: #fff;
-        }
+        .social-btn:hover { background: var(--gold); color: #fff; }
 
-        .footer-copy {
-            text-align: center;
-            font-size: 0.80rem;
-        }
-
+        .footer-copy { text-align: center; font-size: 0.80rem; }
         .footer-copy span { color: var(--gold-light); }
 
         /* =============================================
@@ -1140,10 +1088,9 @@
         }
 
         /* =============================================
-           MOBILE MENU
+           RESPONSIVO
         ============================================= */
         @media (max-width: 768px) {
-
             .hamburger { display: flex; }
 
             .nav-menu {
@@ -1162,7 +1109,6 @@
             }
 
             .nav-menu.open { right: 0; }
-
             .nav-menu li { width: 100%; }
 
             .nav-menu a {
@@ -1181,40 +1127,41 @@
                 border-radius: 50px !important;
             }
 
-            .sobre-grid          { grid-template-columns: 1fr; gap: 40px; }
-            .sobre-imagem        { display: none; }
-            .sobre-stats         { grid-template-columns: repeat(3, 1fr); }
+            .sobre-stats { grid-template-columns: 1fr; gap: 16px; }
 
-            .roteiros-grid       { grid-template-columns: 1fr; }
+            .roteiros-grid { grid-template-columns: 1fr; }
             .roteiro-card.destaque { flex-direction: column; }
-            .roteiro-card.destaque .card-imagem { width: 100%; height: 220px; }
+            .roteiro-card.destaque .card-imagem { width: 100%; height: 240px; }
 
-            .novos-destinos-section { grid-template-columns: 1fr; text-align: center; }
-            .destinos-chips      { justify-content: center; }
-            .novos-destinos-cta  { width: 100%; }
+            .novos-destinos-section { grid-template-columns: 1fr; text-align: center; padding: 36px 24px; }
+            .destinos-chips { justify-content: center; }
+            .novos-destinos-cta { width: 100%; }
 
-            .diferenciais-grid   { grid-template-columns: 1fr; }
+            .diferenciais-grid { grid-template-columns: 1fr; }
 
-            .timeline-anos       { gap: 0; overflow-x: auto; padding: 0 20px; }
-            .timeline-item       { padding: 0 20px; }
+            .timeline-anos { overflow-x: auto; padding-bottom: 12px; }
+            .timeline-item { padding: 0 20px; }
 
-            .contato-grid        { grid-template-columns: 1fr; gap: 28px; }
+            .contato-grid { grid-template-columns: 1fr; gap: 28px; }
             .contato-info-box,
-            .contato-form-box    { padding: 32px 24px; }
+            .contato-form-box { padding: 32px 24px; }
 
-            .footer-grid         { grid-template-columns: 1fr; text-align: center; gap: 24px; }
-            .footer-links        { flex-wrap: wrap; }
-            .footer-social       { justify-content: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-social { justify-content: center; }
         }
 
         @media (max-width: 480px) {
-            .sobre-stats         { grid-template-columns: 1fr; }
-            .novos-destinos-section { padding: 36px 24px; }
+            .sobre-stats { grid-template-columns: 1fr; }
+            .hero-actions { flex-direction: column; align-items: center; }
         }
 
     </style>
 </head>
 <body>
+
+    <!-- ======== WHATSAPP FLUTUANTE ======== -->
+    <a href="https://wa.me/5535988622943" target="_blank" class="whatsapp-float" aria-label="WhatsApp">💬</a>
 
     <!-- ======== NAVBAR ======== -->
     <header id="mainHeader">
@@ -1285,52 +1232,41 @@
         </div>
     </div>
 
-    <!-- ======== SOBRE NÓS ======== -->
+    <!-- ======== SOBRE NÓS (centralizado, sem foto) ======== -->
     <section id="sobre">
         <div class="container">
-            <div class="sobre-grid">
+            <div class="sobre-centro">
+                <span class="sobre-label">Nossa História</span>
+                <h2>
+                    Três décadas levando você
+                    <em>ao melhor do mundo</em>
+                </h2>
+                <div class="sobre-divider"></div>
+                <p>
+                    Desde 1996, a Oficina de Turismo transforma roteiros em memórias.
+                    Nascemos em São Lourenço e crescemos com a confiança de cada viajante
+                    que escolheu ir mais longe conosco.
+                </p>
+                <p>
+                    Somos especializados em viagens internacionais em grupo com acompanhamento
+                    personalizado do início ao fim — da reserva ao retorno — garantindo
+                    segurança, conforto e momentos que ficam para sempre.
+                </p>
 
-                <div class="sobre-texto">
-                    <span class="sobre-label">Nossa História</span>
-                    <h2>
-                        Três décadas levando você
-                        <em>ao melhor do mundo</em>
-                    </h2>
-                    <p>
-                        Desde 1996, a Oficina de Turismo transforma roteiros em memórias.
-                        Nascemos em São Lourenço e crescemos com a confiança de cada viajante
-                        que escolheu ir mais longe conosco.
-                    </p>
-                    <p>
-                        Somos especializados em viagens internacionais em grupo com acompanhamento
-                        personalizado do início ao fim — da reserva ao retorno — garantindo
-                        segurança, conforto e momentos que ficam para sempre.
-                    </p>
-
-                    <div class="sobre-stats">
-                        <div class="stat-item">
-                            <span class="stat-numero">30+</span>
-                            <span class="stat-label">Anos de mercado</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-numero">50+</span>
-                            <span class="stat-label">Destinos visitados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-numero">100%</span>
-                            <span class="stat-label">Acompanhado</span>
-                        </div>
+                <div class="sobre-stats">
+                    <div class="stat-item">
+                        <span class="stat-numero">30+</span>
+                        <span class="stat-label">Anos de mercado</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">50+</span>
+                        <span class="stat-label">Destinos visitados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">100%</span>
+                        <span class="stat-label">Acompanhado</span>
                     </div>
                 </div>
-
-                <div class="sobre-imagem">
-                    <img src="imagens/sobre-agencia.jpg" alt="Equipe Oficina de Turismo">
-                    <div class="sobre-imagem-badge">
-                        <strong>1996</strong>
-                        <span>Fundação</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -1342,15 +1278,15 @@
             <div class="section-header">
                 <span class="section-label">Temporada 2027</span>
                 <h2>Roteiros Disponíveis</h2>
-                <p>Clique em qualquer destino para conhecer o roteiro completo, hotéis, experiências e valores.</p>
+                <p>Clique em qualquer destino para conhecer o roteiro completo e garantir sua vaga.</p>
             </div>
 
             <div class="roteiros-grid">
 
-                <!-- CARD DESTAQUE — TAILÂNDIA -->
+                <!-- CARD DESTAQUE — TAILÂNDIA (2.jpg) -->
                 <div class="roteiro-card destaque">
                     <div class="card-imagem">
-                        <img src="imagens/tailandia.jpg" alt="Tailândia Mágica 2027">
+                        <img src="imagens/2.jpg" alt="Tailândia Mágica 2027">
                         <div class="card-tags">
                             <span class="tag tag-nova-turma">Nova Turma</span>
                         </div>
@@ -1377,10 +1313,10 @@
                     </div>
                 </div>
 
-                <!-- CARD — ATACAMA -->
+                <!-- CARD — ATACAMA (8.jpg) -->
                 <div class="roteiro-card">
                     <div class="card-imagem">
-                        <img src="imagens/atacama.jpg" alt="Belezas do Atacama 2027">
+                        <img src="imagens/8.jpg" alt="Belezas do Atacama 2027">
                         <div class="card-tags">
                             <span class="tag tag-outubro">Outubro 2027</span>
                         </div>
@@ -1404,12 +1340,12 @@
                     </div>
                 </div>
 
-                <!-- CARD — ESCANDINÁVIA -->
+                <!-- CARD — ESCANDINÁVIA (4.jpg) -->
                 <div class="roteiro-card">
                     <div class="card-imagem">
-                        <img src="imagens/escandinavia.jpg" alt="Maravilhas da Escandinávia 2027">
+                        <img src="imagens/4.jpg" alt="Maravilhas da Escandinávia 2027">
                         <div class="card-tags">
-                            <span class="tag tag-novidade">Novidade</span>
+                            <span class="tag tag-maio">Maio/Jun 2027</span>
                         </div>
                     </div>
                     <div class="card-body">
@@ -1431,10 +1367,10 @@
                     </div>
                 </div>
 
-                <!-- CARD — MALTA -->
+                <!-- CARD — MALTA (3.jpg) -->
                 <div class="roteiro-card">
                     <div class="card-imagem">
-                        <img src="imagens/malta.jpg" alt="Experiência Malta 2027">
+                        <img src="imagens/3.jpg" alt="Experiência Malta 2027">
                         <div class="card-tags">
                             <span class="tag tag-breve">Em breve</span>
                         </div>
@@ -1460,20 +1396,23 @@
 
             </div>
 
-            <!-- NOVOS DESTINOS -->
+            <!-- NOVOS DESTINOS COM IMAGENS -->
             <div class="novos-destinos-section">
                 <div class="novos-destinos-texto">
-                    <span class="label">🚀 Novidades chegando</span>
-                    <h3>Mais destinos em 2027</h3>
+                    <span class="label">🚀 Novidades chegando em 2027</span>
+                    <h3>Mais destinos incríveis</h3>
                     <p>
                         Todos com acompanhamento personalizado desde São Lourenço.
                         Entre em contato e garanta sua vaga antecipada.
                     </p>
                     <div class="destinos-chips">
+                        <span class="chip">🌿 Grand Amazon</span>
+                        <span class="chip">🏔️ Patagônia</span>
+                        <span class="chip">🏰 Leste Europeu</span>
+                        <span class="chip">🦁 África do Sul</span>
                         <span class="chip">🇦🇷 Buenos Aires</span>
                         <span class="chip">🇵🇪 Peru</span>
                         <span class="chip">🇲🇦 Marrocos</span>
-                        <span class="chip">🇧🇷 São Luís do Maranhão</span>
                         <span class="chip">🏝️ Fernando de Noronha</span>
                     </div>
                 </div>
@@ -1488,11 +1427,121 @@
         </div>
     </section>
 
-    <!-- ======== TIMELINE — 30 ANOS ======== -->
+    <!-- ======== GALERIA DE DESTINOS EM DESTAQUE ======== -->
+    <section style="padding: 80px 0; background: var(--warm-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Inspire-se</span>
+                <h2>Destinos que Aguardam por Você</h2>
+                <p>Uma prévia do que está por vir na temporada 2027.</p>
+            </div>
+
+            <div style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                margin-top: 0;
+            ">
+                <!-- Grand Amazon -->
+                <div style="position:relative; border-radius: var(--radius); overflow:hidden; height:220px; cursor:pointer;">
+                    <img src="imagens/5.jpg" alt="Grand Amazon"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+                    <div style="
+                        position:absolute; inset:0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);
+                        display:flex; align-items:flex-end; padding:20px;
+                    ">
+                        <div>
+                            <p style="color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Em breve</p>
+                            <p style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;">Grand Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patagônia -->
+                <div style="position:relative; border-radius: var(--radius); overflow:hidden; height:220px; cursor:pointer;">
+                    <img src="imagens/6.jpg" alt="Patagônia"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+                    <div style="
+                        position:absolute; inset:0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);
+                        display:flex; align-items:flex-end; padding:20px;
+                    ">
+                        <div>
+                            <p style="color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Em breve</p>
+                            <p style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;">Patagônia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leste Europeu -->
+                <div style="position:relative; border-radius: var(--radius); overflow:hidden; height:220px; cursor:pointer;">
+                    <img src="imagens/7.jpg" alt="Leste Europeu"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+                    <div style="
+                        position:absolute; inset:0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);
+                        display:flex; align-items:flex-end; padding:20px;
+                    ">
+                        <div>
+                            <p style="color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Em breve</p>
+                            <p style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;">Leste Europeu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- África do Sul -->
+                <div style="position:relative; border-radius: var(--radius); overflow:hidden; height:220px; cursor:pointer; grid-column: span 2;">
+                    <img src="imagens/9.jpg" alt="África do Sul"
+                        style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;">
+                    <div style="
+                        position:absolute; inset:0;
+                        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 60%);
+                        display:flex; align-items:flex-end; padding:20px;
+                    ">
+                        <div>
+                            <p style="color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Em breve</p>
+                            <p style="color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;">África do Sul</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fale conosco card -->
+                <div style="
+                    background: var(--gold);
+                    border-radius: var(--radius);
+                    height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 28px;
+                    gap: 16px;
+                ">
+                    <span style="font-size:2rem;">✈️</span>
+                    <p style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;font-weight:600;line-height:1.3;">
+                        Qual será o seu próximo destino?
+                    </p>
+                    <a href="https://wa.me/5535988622943" target="_blank" style="
+                        background:#fff;
+                        color: var(--gold-dark);
+                        text-decoration:none;
+                        font-size:0.85rem;
+                        font-weight:700;
+                        padding: 10px 22px;
+                        border-radius:50px;
+                    ">Falar conosco →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== TIMELINE ======== -->
     <div class="timeline-section">
         <div class="container">
             <div class="timeline-content">
-
                 <div class="timeline-anos">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
@@ -1520,13 +1569,11 @@
                         <span class="timeline-desc">Novos roteiros</span>
                     </div>
                 </div>
-
                 <p class="timeline-quote">
                     "Trinta anos não é apenas uma data —
                     é a <span>soma de cada destino</span> que você escolheu
                     descobrir com a gente."
                 </p>
-
             </div>
         </div>
     </div>
@@ -1562,116 +1609,5 @@
                 </div>
                 <div class="diferencial-card">
                     <span class="dif-icon">🤝</span>
-                    <h3>Suporte Completo</h3>
-                    <p>Do planejamento ao retorno, nossa equipe está disponível para garantir sua tranquilidade.</p>
-                </div>
-                <div class="diferencial-card">
-                    <span class="dif-icon">💎</span>
-                    <h3>Experiências Selecionadas</h3>
-                    <p>Cada atividade é escolhida a dedo para criar memórias únicas e momentos verdadeiramente especiais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======== CONTATO ======== -->
-    <section id="contato">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Fale Conosco</span>
-                <h2>Realize seu Próximo Sonho</h2>
-                <p>Nossa equipe está pronta para ajudar você a escolher a viagem perfeita.</p>
-            </div>
-
-            <div class="contato-grid">
-
-                <div class="contato-info-box">
-                    <h3>Oficina de Turismo</h3>
-                    <p class="sub">30 anos transformando sonhos em realidade</p>
-
-                    <div class="contato-item">
-                        <div class="contato-icon-box">📧</div>
-                        <div>
-                            <strong>E-mail</strong>
-                            <a href="mailto:oficinadeturismo@oficinatur.com.br">
-                                oficinadeturismo@oficinatur.com.br
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contato-item">
-                        <div class="contato-icon-box">📱</div>
-                        <div>
-                            <strong>WhatsApp</strong>
-                            <a href="https://wa.me/5535988622943" target="_blank">
-                                (35) 98862-2943
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contato-item">
-                        <div class="contato-icon-box">📸</div>
-                        <div>
-                            <strong>Instagram</strong>
-                            <a href="https://instagram.com/oficinadeturismo" target="_blank">
-                                @oficinadeturismo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contato-form-box">
-                    <h3>Envie uma Mensagem</h3>
-                    <p class="sub">Responderemos em até 24 horas</p>
-
-                    <form action="https://formsubmit.co/oficinadeturismo@oficinatur.com.br" method="POST">
-                        <input type="hidden" name="_subject" value="Novo contato pelo site — Oficina de Turismo">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <div class="form-group">
-                            <label>Seu nome</label>
-                            <input type="text" name="nome" placeholder="Como podemos te chamar?" required>
-                        </div>
-                        <div class="form-group">
-                            <label>E-mail</label>
-                            <input type="email" name="email" placeholder="seu@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefone / WhatsApp</label>
-                            <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Mensagem</label>
-                            <textarea name="mensagem" placeholder="Qual destino te interessa? Como podemos ajudar?" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-enviar">Enviar Mensagem ✈️</button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ======== FOOTER ======== -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-logo">
-                    <img src="imagens/logo.png" alt="Oficina de Turismo">
-                </div>
-                <ul class="footer-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#roteiros">Roteiros</a></li>
-                    <li><a href="#diferenciais">DNA</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <div class="footer-social">
-                    <a href="https://wa.me/5535988622943" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
-                    <a href="https://instagram.com/oficinadeturismo" target="_blank" class="social-btn" aria-label="Instagram">📸</a>
-                    <a href="mailto:oficinadeturismo@oficinatur.com.br" class="social-btn" aria-label="E-mail">📧</a>
-                </div>
-            </div>
-            <p class="footer-copy">
-                ©
+                    <h3>Suporte Completo
 
